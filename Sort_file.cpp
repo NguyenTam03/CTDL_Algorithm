@@ -3,7 +3,7 @@
 using namespace std;
 struct info{
     string masv;
-    int size;
+    int pos_MSSV;
 };
 void Sort(info A[], int q,int r){ 
     info temp;
@@ -42,17 +42,18 @@ int main(){
             if(s[j]==',')   break;
             a[i].masv+=s[j];
         }
-        a[i].size = temp;
+        a[i].pos_MSSV = temp;
         temp += s.length()+1; // +1 la ky tu \n or temp += sizeof(s[0]) * s.length() + 1;
+        // nếu đúng theo đề là temp += 1024;
         i++;
     }
     ifs.close();
     Quick_Sort(a,n);
     ifstream ifs1("dssv.bat",ios::in | ios::binary);
     ofstream ofs("res.bat",ios::out | ios::binary);
-    int b = 0, size = 0;
+    int b = 0, pos_MSSV = 0;
     for(int i=0;i<n;i++){
-        ifs1.seekg(a[i].size,ios::beg);
+        ifs1.seekg(a[i].pos_MSSV,ios::beg);
         getline(ifs1,s);
         ofs << s << endl;
     }
