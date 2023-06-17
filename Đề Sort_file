@@ -1,0 +1,1 @@
+Bài tập: Giả sử ta có file nhị phân lưu 100.000 SV (MASV, HO, TEN,…., MALOP). 1 SV chiếm 1KB=1024 bytes. Viết chương trình sắp xếp DSSV trong file tăng dần theo MASV sao cho nhanh nhất. Biết rằng bộ nhớ trong chỉ lưu được tối đa 10.000 SV.
