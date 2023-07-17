@@ -1,0 +1,6 @@
+- Các bước trả lời Sort_file:
++ Ban đầu sẽ tạo 1 struct rồi 2 filed gồm masv và pos_mssv
++ Mình sẽ duyệt tuần tự lấy từng mã sinh viên của thông tin sinh viên đó gắn vào biến masv
++ pos_mssv đó sẽ bắt đầu từ 0, mỗi lần duyệt sẽ + thêm 1024 ( vì mỗi sinh viên chữa 1024 bytes)
++ Khi duyệt xong mình sẽ dùng quick_sort để sắp xếp tăng dần theo masv ( pos_mssv cũng sẽ bị sắp xếp theo mssv)
++ Rồi mình sẽ xuất ra file txt nào đó. Mình sẽ xóa file cũ đi và đổi tên file mới giống tên file cũ vậy là đã xong.
